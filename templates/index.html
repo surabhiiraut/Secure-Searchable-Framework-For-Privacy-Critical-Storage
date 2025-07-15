@@ -1,0 +1,720 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Hosting | Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/animated-headline.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body>
+
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/securestorage_logo-Photoroom.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html"><img src="assets/img/logo/securestorage_logo-Photoroom.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">                                                                                          
+                                                <li><a href="{{ url_for('index') }}">Home</a></li>
+                                                <li><a href="{{ url_for('packages') }}">Services</a></li>
+                                                <li><a href="{{ url_for('help_page') }}">Help</a></li>
+                                                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                                                <!-- Button -->
+                                                 {% if 'user_id' in session %}
+                                                <li><a href="#" style="color: #ffffff;">Hello, {{ username }}!</a></li>
+                                                <li class="button-header"><a href="{{ url_for('logout') }}" class="btn3">Logout</a></li>
+                                                {% else %}
+                                                <li class="button-header margin-left"><a href="{{ url_for('register') }}" class="btn">Sign Up</a></li>
+                                                <li class="button-header"><a href="{{ url_for('login') }}" class="btn3">Sign In</a></li>
+                                                {% endif %}
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!-- Slider Area Start-->
+        <div class="slider-area slider-bg ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider d-flex align-items-center slider-height ">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-xl-5 col-lg-5 col-md-9 ">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".3s">Best Domain & hosting service provider</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".6s ">Secure Cloud Storage</h1>
+                                    <p data-animation="fadeInLeft" data-delay=".8s">Upload, encrypt, and store your files with ease.
+                                        Our service ensures that your data remains private and searchable.</p>
+                                    <!-- Slider btn -->
+                                    <div class="slider-btns">
+                                        <!-- Hero-btn -->
+                                        <!-- <a data-animation="fadeInLeft" data-delay="1s" href="industries.html" class="btn radius-btn">get started</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="hero__img d-none d-lg-block f-right">
+                                    <img src="assets/img/hero/hero_right.png" alt="" data-animation="fadeInRight" data-delay="1s">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+                <!-- Single Slider -->
+                <div class="single-slider d-flex align-items-center slider-height ">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-9 ">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".3s">Best Domain & hosting service provider</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".6s">Secure Cloud Storage</h1>
+                                    <p data-animation="fadeInLeft" data-delay=".8s">Upload, encrypt, and store your files with ease.
+                                        Our service ensures that your data remains private and searchable.</p>
+                                    <!-- Slider btn -->
+                                    <div class="slider-btns">
+                                        <!-- Hero-btn -->
+                                        <a data-animation="fadeInLeft" data-delay="1s" href="industries.html" class="btn radius-btn">get started</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="hero__img d-none d-lg-block f-right">
+                                    <img src="assets/img/hero/hero_right.png" alt="" data-animation="fadeInRight" data-delay="1s">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+            <!-- Slider Shape -->
+            <div class="slider-shape d-none d-lg-block">
+                <img class="slider-shape1" src="assets/img/hero/top-left-shape.png" alt="">
+            </div>
+        </div>
+      
+    <section class="team-area section-padding40 section-bg1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12">
+                    <div class="section-tittle text-center mb-105">
+                        <h2>Most amazing features</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6"">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services1.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Data Confidentiality</a></h5>
+                            <p>Advanced encryption for sensitive data protection.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services2.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Efficient Search</a></h5>
+                            <p>Fast, secure, and encrypted search without decryption.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services3.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Commitment to Security</a></h5>
+                            <p>Robust, multi-layered protection against unauthorized access.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services4.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">End-to-End Privacy</a></h5>
+                            <p>Ensure privacy with authorized-only access to results.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services5.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">24/7 Accessibility</a></h5>
+                            <p>Reliable, round-the-clock service and performance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services6.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">100% Uptime</a></h5>
+                            <p>Guaranteed availability for critical operations and data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services End -->
+    <!--? Pricing Card Start -->
+    <section class="pricing-card-area fix">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-8">
+                    <div class="section-tittle text-center mb-90">
+                        <h2>Choose the Service That Fits Your Needs</h2>
+                        <p>Supercharge your cloud data security with our tailored encryption solutions. Whether you need encrypted search, advanced cloud security, or global server performance, our experts are here to guide you to the best solution for your needs. We’re committed to helping you succeed in securing your critical services!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-card text-center mb-30">
+                        <div class="card-top">
+                            <img src="assets/img/icon/price1.svg" alt="">
+                            <h4>Cloud Storage & Data Upload</h4>
+                            <!-- <p>Starting at</p> -->
+                        </div>
+                        <div class="card-mid">
+                            <!-- <h4>$4.67 <span>/ month</span></h4> -->
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li>5 TB of Secure Storage</li>
+                                <li>Fast, Encrypted Data Upload</li>
+                                <li>24/7 Data Protection</li>
+                                <li>Unlimited Access</li>
+                                <!-- <li>unlimited database</li> -->
+                            </ul>
+                            <!-- Upload Button -->
+                            <!-- Upload Button -->
+<!--                            {% if session.get('user_id') %}-->
+                            <!-- Show upload form only if user is logged in -->
+                          <form id="uploadForm" action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data" onsubmit="return handleFileUpload()">
+                              <input type="file" name="file" required>
+                              <br/><br/>
+                               <input type="email" name="email" placeholder="Enter your email" required> <!-- Ensure this exists -->
+                              <br/><br/>
+                              <button class="borders-btn" id="uploadButton" style="padding: 8px 15px;"> UPLOAD FILES</button>
+                          </form>
+
+                            {% else %}
+                            <!-- Show login prompt if user is not logged in -->
+                            <div class="login-prompt">
+                                <button onclick="window.location.href='{{ url_for('login') }}'" class="borders-btn">LOGIN TO UPLOAD FILES </button>
+                            </div>
+                            {% endif %}
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-card text-center mb-30">
+                        <div class="card-top">
+                            <img src="assets/img/icon/price2.svg" alt="">
+                            <h4>Data Retrieval from Uploaded Files</h4>
+                            <!-- <p>Starting at</p> -->
+                        </div>
+                        <div class="card-mid">
+                            <!-- <h4>$4.67 <span>/ month</span></h4> -->
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li>Instant Data Access</li>
+                                <li>Seamless File Processing</li>
+                                <li>Advanced Search & Query Capabilities</li>
+                                <li>Real-Time Data Retrieval</li>
+                            </ul>
+                        
+                            <!-- Search Input and Retrieve Button Wrapper -->
+                            <!-- Retrieve File Button -->
+                            <form id="retrieveForm" action="{{ url_for('retrieve_file') }}" method="POST">
+                                <input type="text" name="filename" placeholder="Enter filename (e.g., demo.txt)" required>
+                                <br/><br/>
+<!--                                <label>Enter Search Key:</label>  &lt;!&ndash; New input field &ndash;&gt;-->
+                                <input type="text" name="search_key" placeholder="Enter search key..." required> <br/><br/>
+                                <button class="borders-btn" id="retrieveButton" style="padding: 8px 15px;" type="submit">Retrieve File</button>
+                            </form>
+                            <p id="message"></p>
+
+                            <!-- File List Display -->
+                            <div id="fileList" style="margin-top: 10px;"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-card text-center mb-30">
+                        <div class="card-top">
+                            <img src="assets/img/icon/price3.svg" alt="">
+                            <h4>File Request from Cloud Storage</h4>
+                            <!-- <p>Starting at</p> -->
+                        </div>
+                        <div class="card-mid">
+                            <!-- <h4>$4.67 <span>/ month</span></h4> -->
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li>Instant File Request</li>
+                                <li>Fully Encrypted Transfers</li>
+                                <li>Real-Time Data Delivery</li>
+                                <li> Secure Sharing </li>
+                            </ul>
+                        
+                            <!-- Search Input and Buttons Wrapper -->
+<!--                            <div style="display: flex; gap: 10px; align-items: center; margin-top: 10px;">-->
+<!--                                <input type="text" id="searchInput" placeholder="Enter file name..." style="padding: 8px; flex: 1;" />-->
+<!--                                -->
+<!--                                <button class="borders-btn" id="requestDataButton" style="padding: 8px 15px;">Request Data</button>-->
+<!--                            </div>-->
+                           <div class="file-request-container">
+
+                               <input type="text" id="request_filename" placeholder="Enter file name..."><br/><br/>
+                               <input type="text" id="request_username" placeholder="Your Username"><br/><br/>
+                               <button class="borders-btn" id="requestDataButton" style="padding: 8px 15px;" onclick="requestFile()">REQUEST FILE</button>
+
+                               <!-- Pending Requests Section -->
+
+                        
+                            <!-- File List Display -->
+                            <div id="fileList" style="margin-top: 10px;"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Card End -->
+
+<!--        Request section-->
+<section id="requests-section">
+    <div class="requests-container" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+
+<!--        <div class="pending-requests" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">-->
+            <h2>Pending File Requests</h2>
+            <button class="borders-btn"  id="viewRequestsBtn">View Requests</button>
+            <ul id="pendingRequests">
+                <li>Click "View Requests" to see pending requests</li>
+            </ul>
+        </div>
+<!--    </div>-->
+
+</section>
+
+
+<!--        end of request section-->
+    <!--? About-1 Area Start -->
+    <div class="about-area1 section-padding40">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xl-5 col-lg-5 col-md-8 col-sm-10">
+                    <!-- about-img -->
+                    <div class="about-img ">
+                        <img src="assets/img/gallery/about1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-12">
+                    <div class="about-caption ">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle section-tittle2 mb-30">
+                            <h2>Global server location</h2>
+                        </div>
+                        <p class="mb-40">Supercharge your cloud services with a secure searchable encryption framework, optimized for global performance. Our global server network ensures that encrypted data is accessed quickly and securely, wherever you are. We're committed to protecting your data!</p>
+                        <ul>
+                            <li>
+                                <img src="assets/img/icon/right.svg" alt="">
+                                <p>Access your encrypted data seamlessly from secure servers worldwide.</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/icon/right.svg" alt="">
+                                <p>High-performance encryption and secure search across global locations.</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/icon/right.svg" alt="">
+                                <p> Global data privacy ensured, with full control over encrypted access.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About-1 Area End -->
+    <!--? About-2 Area Start -->
+    <div class="about-area1 pb-bottom">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xl-7 col-lg-7 col-md-12">
+                    <div class="about-caption about-caption3 mb-50">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle section-tittle2 mb-30">
+                            <h2>Dedicated support</h2>
+                        </div>
+                        <p class="mb-40">Supercharge your secure searchable encryption framework with expert support every step of the way. Our team is dedicated to ensuring the highest performance, security, and reliability for your cloud services. We’re here to help you succeed!
+
+                        </p>
+                        <ul class="mb-30">
+                            <li>
+                                <img src="assets/img/icon/right.svg" alt="">
+                                <p>Get specialized support from our encryption and cloud security experts.</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/icon/right.svg" alt="">
+                                <p>Access dedicated support around the clock for any issues or questions.</p>
+                            </li>
+                        </ul>
+                        <!-- <a href="#" class="btn"><i class="fas fa-phone-alt"></i>(10) 892-293 2678</a> -->
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5 col-md-8 col-sm-10">
+                    <!-- about-img -->
+                    <div class="about-img ">
+                        <img src="assets/img/gallery/about2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About-2 Area End -->
+    <!-- ask questions -->
+    <section class="ask-questions section-bg1 section-padding30 fix">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-9 col-md-10 ">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-90">
+                        <h2>Frequently ask questions</h2>
+                        <p>Supercharge your cloud services with secure searchable encryption. Our experts are dedicated to ensuring your data remains protected and accessible. We're here to help you optimize your cloud security and encryption setup every step of the way!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-question d-flex mb-50">
+                        <span> Q.</span>
+                        <div class="pera">
+                            <h2>Why can't I access my encrypted data from my cloud service?</h2>
+                            <p>Our global network of secure servers ensures smooth access to encrypted data. If you're facing issues, our dedicated support team is available 24/7 to help you resolve any connectivity concerns.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-question d-flex mb-50">
+                        <span> Q.</span>
+                        <div class="pera">
+                            <h2>How can I ensure my cloud service is fully secure?</h2>
+                            <p>Our framework uses cutting-edge encryption protocols to secure your data. We also offer continuous monitoring and advanced security features to protect against unauthorized access.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-question d-flex mb-50">
+                        <span> Q.</span>
+                        <div class="pera">
+                            <h2>How can I search encrypted data without decrypting it?</h2>
+                            <p>Our advanced searchable encryption allows you to search and retrieve data from the cloud while keeping it fully encrypted. No decryption is required to access search results.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-question d-flex mb-50">
+                        <span> Q.</span>
+                        <div class="pera">
+                            <h2>Why do I need to authenticate when accessing my encrypted cloud data?</h2>
+                            <p>Authentication ensures that only authorized users can access your encrypted data. Our multi-layered authentication process helps maintain the highest level of security for your cloud services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-xl-12 ">
+                    <div class="more-btn text-center mt-20">
+                        <a href="#" class="btn">Go to Support</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <!-- End ask questions -->
+    <!--? Testimonial Area Start -->
+    <section class="testimonial-area section-bg1">    
+        <div class="container" >   
+            <div class="testimonial-wrapper">
+                <div class="row align-items-center justify-content-center">
+                    <div class=" col-lg-10 col-md-12 col-sm-11">
+                        <!-- Testimonial Start -->
+                        <div class="h1-testimonial-active">
+                            <!-- Single Testimonial -->
+                            <div class="single-testimonial text-center mt-55">
+                                <div class="testimonial-caption">
+                                    <img src="assets/img/icon/quotes-sign.png" alt="" class="quotes-sign">
+                                    <p>Our secure searchable encryption framework has truly revolutionized how we manage sensitive data. With seamless encryption and fast, efficient search capabilities, our team can access critical information without compromising on security. The easy-to-integrate system and dedicated support make it the perfect solution for our cloud services.</p>
+                                </div>
+                                <!-- founder -->
+                                <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                    <!-- <div class="founder-img">
+                                        <img src="assets/img/icon/testimonial.png" alt="">
+                                    </div> -->
+                                    <div class="founder-text">
+                                        <span>Ravi Kumar</span>
+                                        <p>IT Manager</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Testimonial -->
+                            <div class="single-testimonial text-center mt-55"">
+                                <div class="testimonial-caption">
+                                    <img src="assets/img/icon/quotes-sign.png" alt="" class="quotes-sign">
+                                    <p>The framework’s robust encryption and privacy features give us peace of mind knowing our critical data is fully protected. The global server network ensures fast and secure access from anywhere, while the intuitive interface makes managing encrypted data easier than ever. A game-changer for any business looking to secure their cloud services.</p>
+                                </div>
+                                <!-- founder -->
+                                <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                    
+                                    <div class="founder-text">
+                                        <span>Priya Sharma</span>
+                                        <p>cloud Services Coordinator</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--? Testimonial Area End -->
+</main>
+<footer>
+    <div class="footer-wrappr " data-background="assets/img/gallery/footer-bg.png">
+        <div class="footer-area footer-padding ">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <!-- logo -->
+                            <div class="footer-logo mb-25">
+                                <a href="index.html"><img src="assets/img/logo/securestorage_logo-Photoroom.png" alt=""></a>
+                            </div>
+                            <div class="footer-tittle mb-50">
+                                <p>Subscribe our newsletter to get updates about our services</p>
+                            </div>
+                            <!-- Form -->
+                            <div class="footer-form">
+                                <div id="mc_embed_signup">
+                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                        <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                                        <div class="form-icon">
+                                            <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
+                                                Subscribe
+                                            </button>
+                                        </div>
+                                        <div class="mt-10 info"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- social -->
+                            <!-- <div class="footer-social mt-50">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1"></div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="#">Why choose us</a></li>
+                                    <li><a href="#"> Review</a></li>
+                                    <li><a href="#">Customers</a></li>
+                                    <!-- <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Carrier</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Products</h4>
+                                <ul>
+                                    <li><a href="#">Why choose us</a></li>
+                                    <li><a href="#"> Review</a></li>
+                                    <li><a href="#">Customers</a></li>
+                                    <!-- <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Carrier</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Support</h4>
+                                <ul>
+                                    <li><a href="#">Technology</a></li>
+                                    <li><a href="#">  Products</a></li>
+                                    <li><a href="#">Customers</a></li>
+                                    <!-- <li><a href="#">Quality</a></li>
+                                    <li><a href="#">Sales geography</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="footer-copy-right text-center">
+                                <!-- <p>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+                                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                  Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.</p> -->
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- Scroll Up -->
+  <div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- JS here -->
+
+<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./assets/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/animated.headline.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
+
+<!-- Date Picker -->
+<script src="./assets/js/gijgo.min.js"></script>
+
+<!-- Video bg -->
+<script src="./assets/js/jquery.vide.js"></script>
+
+<!-- Nice-select, sticky -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/jquery.sticky.js"></script>
+<!-- Progress -->
+<script src="./assets/js/jquery.barfiller.js"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="./assets/js/jquery.counterup.min.js"></script>
+<script src="./assets/js/waypoints.min.js"></script>
+<script src="./assets/js/jquery.countdown.min.js"></script>
+<script src="./assets/js/hover-direction-snake.min.js"></script>
+
+<!-- contact js -->
+<script src="./assets/js/contact.js"></script>
+<script src="./assets/js/jquery.form.js"></script>
+<script src="./assets/js/jquery.validate.min.js"></script>
+<script src="./assets/js/mail-script.js"></script>
+<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="./assets/js/plugins.js"></script>
+<script src="./assets/js/main.js"></script>
+
+</body>
+</html>

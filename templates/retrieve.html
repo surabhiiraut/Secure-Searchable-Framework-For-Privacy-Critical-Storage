@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve File</title>
+    <link rel="stylesheet" href="assets/styles.css">  <!-- Add your styles -->
+</head>
+<body>
+    <div class="container">
+        <h2>Retrieve File</h2>
+
+        <!-- Form to enter filename to retrieve -->
+        <form id="retrieveForm">
+            <input type="text" id="filename" placeholder="Enter filename" required>
+            <button type="submit">Retrieve File</button>
+        </form>
+
+        <!-- Dialog box to display retrieved file data -->
+        <div id="dialog" style="display: none;">
+            <h3>Retrieved File Data</h3>
+            <p><strong>Filename:</strong> <span id="dialogFilename"></span></p>
+            <p><strong>IV:</strong> <span id="dialogIV"></span></p>
+            <p><strong>encrypyted_Data:</strong> <span id="dialogData"></span></p>
+            <button onclick="closeDialog()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Handle the form submission using AJAX
+        document.getElementById('retrieveForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent default form submission
+
+        const filename = document.getElementById('filename').value;
+
+        // Send the GET request to the Flask server
+        fetch(`/retrieve?filename=${filename}`)
+        .then(response => response.json())  // Parse the JSON response
+        .then(data => {
+            if (data.filename) {
+                // If file found, display data in the dialog
+                document.getElementById('dialogFilename').innerText = data.filename;
+                document.getElementById('dialogIV').innerText = data.iv;
+                document.getElementById('dialogData').innerText = data.data;
+
+                // Show the dialog
+                document.getElementById('dialog').style.display = 'block';
+            } else {
+                alert('No matching file found');
+            }
+            })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while retrieving the file.');
+            });
+        });
+
+    </script>
+</body>
+</html>
