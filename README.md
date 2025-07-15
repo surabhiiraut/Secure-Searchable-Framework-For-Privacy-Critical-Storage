@@ -43,30 +43,37 @@ A secure file storage and retrieval system designed for privacy-focused cloud en
    ```bash
    git clone <your-repo-url>
    cd <project-folder>
-Set Up MongoDB Atlas
 
-Create a cluster
+## ⚙️ Set Up MongoDB Atlas
 
-Whitelist your IP
+1. Create a cluster  
+2. Whitelist your IP  
+3. Create a user and get the connection URI  
+4. Add the URI to `config.py` or `.env`
 
-Create a user and get the connection URI
+---
 
-Add URI to config.py or .env
+## ⚙️ Set Up MySQL
 
-Set Up MySQL
+1. Create a database (e.g., `user_data`)  
+2. Add DB credentials to the config file
 
-Create a database (e.g., user_data)
+---
 
-Add DB credentials to config file
+## 📦 Install Dependencies
 
-Install Dependencies
+```bash
 pip install -r requirements.txt
-Run the Application
 
-For Flask:
+---
+
+## ▶️ Run the Application
+
+**For Flask:**
+```bash
 python app.py
 
-For Django:
+**For Django:**
 python manage.py runserver
 Visit http://localhost:5000 or http://127.0.0.1:8000
 
