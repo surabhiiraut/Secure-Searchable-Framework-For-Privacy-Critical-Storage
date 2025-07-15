@@ -1,0 +1,26 @@
+# Web framework (choose one based on your project)
+Flask==2.3.2
+# or, if using Django:
+# Django==4.2.5
+
+# Database connectors
+pymongo==4.6.1
+mysql-connector-python==8.3.0
+
+# Encryption
+pycryptodome==3.20.0
+
+# Email (if you use Flask-Mail or similar)
+Flask-Mail==0.9.1
+
+# Environment config (optional)
+python-dotenv==1.0.1
+
+# Password hashing
+bcrypt==4.1.2
+
+# Optional: for form handling and validation in Flask
+Flask-WTF==1.2.1
+
+# Optional: frontend integration helpers
+Flask-Cors==4.0.0
