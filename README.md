@@ -64,7 +64,7 @@ A secure file storage and retrieval system designed for privacy-focused cloud en
 
 ```bash
 pip install -r requirements.txt
-
+```
 ---
 
 ## ▶️ Run the Application
@@ -72,45 +72,43 @@ pip install -r requirements.txt
 **For Flask:**
 ```bash
 python app.py
-
+```
 **For Django:**
-python manage.py runserver
+```python manage.py runserver
 Visit http://localhost:5000 or http://127.0.0.1:8000
+```
 
-📖 How to Use
-1. Register or Log In
-Sign up with your email and password
+## 📖 How to Use
 
-Log in to access your dashboard
+### 1. Register or Log In
+- Sign up with your email and password  
+- Log in to access your dashboard
 
-2. Upload Your File
-Go to the Upload section
+### 2. Upload Your File
+- Go to the **Upload** section  
+- Select a file  
+- It is encrypted using AES and stored in MongoDB Atlas
 
-Select a file
+### 3. Request Your File
+- Enter the **file name** and your **registered username**  
+- A pass key is sent to your email
 
-It is encrypted using AES and stored in MongoDB Atlas
+### 4. Retrieve Your File
+- Enter the pass key in the **Retrieve** section  
+- The file is decrypted and downloaded
 
-3. Request Your File
-Enter the file name and your registered username
+### 5. Forgot Password
+- Use the **Forgot Password** option  
+- An OTP is sent to your email  
+- Use the OTP to reset your password
 
-A pass key is sent to your email
+## 📬 Contact
 
-4. Retrieve Your File
-Enter the pass key in the Retrieve section
+Maintained by **Surabhi Raut**  
+Feel free to connect or raise issues via [GitHub](https://github.com/)
 
-The file is decrypted and downloaded
+---
 
-5. Forgot Password
-Use the “Forgot Password” option
+## 📄 License
 
-An OTP is sent to your email
-
-Use the OTP to reset your password
-
-📬 Contact
-Maintained by Surabhi Raut
-Feel free to connect or raise issues via GitHub
-
-📄 License
-This project is for educational and academic purposes. Add a license if needed.
-
+This project is for educational and academic purposes.
